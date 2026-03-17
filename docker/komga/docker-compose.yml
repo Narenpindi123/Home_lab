@@ -1,0 +1,13 @@
+services:
+  komga:
+    image: gotson/komga:latest
+    container_name: komga
+    user: "1000:1000"
+    environment:
+      - TZ=America/New_York
+    volumes:
+      - ./config:/config
+      - /srv/samba/shared/komga:/data
+    ports:
+      - 8080:25600
+    restart: unless-stopped

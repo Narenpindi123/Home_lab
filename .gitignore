@@ -1,0 +1,15 @@
+# Ignore runtime data and databases
+data/
+db/
+files/
+work/
+backups/
+
+# Ignore Python specific
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db

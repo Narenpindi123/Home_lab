@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  cover-letter-app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: cover_letter_app
+    restart: unless-stopped
+    ports:
+      - 8501:8501
+    env_file: .env
+    volumes:
+      - ./app:/app
+      - /srv/samba/shared/Cover letters:/app/shared_output
+      - /home/naren/Desktop:/app/resumes:ro

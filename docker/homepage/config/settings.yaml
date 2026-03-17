@@ -1,0 +1,18 @@
+title: Naren's Homelab
+theme: dark
+color: neutral
+iconStyle: theme
+hideVersion: true
+headerStyle: clean
+allowedHosts:
+  - <REDACTED_IP>:3001
+  - <REDACTED_IP>
+  - localhost
+  - 127.0.0.1
+  - homepage.home.local
+
+layout:
+  Pinned:
+    style: columns
+    columns: 6
+    header: true

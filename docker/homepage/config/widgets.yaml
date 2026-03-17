@@ -1,0 +1,24 @@
+- greeting:
+    text_size: xl
+    text: "Welcome home, Naren"
+
+- datetime:
+    text_size: lg
+    format:
+      dateStyle: long
+      timeStyle: short
+      hour12: true
+
+- resources:
+    cpu: true
+    memory: true
+    disk: /
+    expanded: true
+    label: System
+
+- openmeteo:
+    label: Buffalo Weather
+    latitude: 42.9554
+    longitude: -78.8638
+    timezone: America/New_York
+    units: imperial
