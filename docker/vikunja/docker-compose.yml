@@ -6,11 +6,11 @@ services:
     environment:
       VIKUNJA_SERVICE_PUBLICURL: http://<REDACTED_IP>:3456
       VIKUNJA_DATABASE_HOST: db
-      VIKUNJA_DATABASE_PASSWORD: vikunja_password
+      VIKUNJA_DATABASE_PASSWORD: <REDACTED>
       VIKUNJA_DATABASE_TYPE: postgres
       VIKUNJA_DATABASE_USER: vikunja
       VIKUNJA_DATABASE_DATABASE: vikunja
-      VIKUNJA_SERVICE_JWTSECRET: s3cur3_jwt_s3cr3t_k3y_f0r_v1kunj4
+      VIKUNJA_SERVICE_JWTSECRET: <REDACTED>
       VIKUNJA_SERVICE_ENABLEREGISTRATION: "true"
     ports:
       - 3456:3456
@@ -32,7 +32,7 @@ services:
     restart: unless-stopped
     shm_size: 256mb
     environment:
-      POSTGRES_PASSWORD: vikunja_password
+      POSTGRES_PASSWORD: <REDACTED>
       POSTGRES_USER: vikunja
     command:
       - "postgres"

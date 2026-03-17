@@ -7,8 +7,8 @@ http:
 users:
   - name: appplextverupt315
     password: <REDACTED>
-auth_attempts: 5
-block_auth_min: 15
+auth_attempts: <REDACTED>
+block_auth_min: <REDACTED>
 http_proxy: ""
 language: ""
 theme: auto
@@ -84,9 +84,9 @@ tls:
   dnscrypt_config_file: ""
   allow_unencrypted_doh: false
   certificate_chain: ""
-  private_key: ""
+  private_key: "<REDACTED>"
   certificate_path: ""
-  private_key_path: ""
+  private_key_path: "<REDACTED>"
   strict_sni_check: false
 querylog:
   dir_path: ""

@@ -6,7 +6,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/New_York
-      - SETTINGS_ENCRYPTION_KEY=gA3A/A6NZ4P//lpzGZBQx77FFGWhz+Xs
+      - SETTINGS_ENCRYPTION_KEY= <REDACTED>
       - CLI_ARGS=--webservice-password= <REDACTED>
     volumes:
       - /home/naren/homelab/docker/duplicati/config:/config # Local config db
