@@ -1,0 +1,52 @@
+- Pinned:
+    - Jellyfin:
+        icon: jellyfin.png
+        href: http://<REDACTED_IP>:8096
+
+    - Navidrome:
+        icon: navidrome.png
+        href: http://<REDACTED_IP>:4533
+
+    - Komga:
+        icon: komga.png
+        href: http://<REDACTED_IP>:8080
+
+    - Romm:
+        icon: sh-romm
+        href: http://<REDACTED_IP>:8085
+
+    - Home Assistant:
+        icon: home-assistant.png
+        href: http://<REDACTED_IP>:8123
+
+    - AdGuard Home:
+        icon: adguard-home.png
+        href: http://<REDACTED_IP>:3000
+
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: http://<REDACTED_IP>:3002
+
+    - Watchtower:
+        icon: watchtower.png
+        href: http://<REDACTED_IP>:3001
+
+    - Duplicati:
+        icon: duplicati.png
+        href: http://<REDACTED_IP>:8200
+
+    - Vikunja:
+        icon: vikunja.png
+        href: http://<REDACTED_IP>:3456
+
+    - Cover Letters:
+        icon: /icons/cover-letters.png
+        href: http://<REDACTED_IP>:8501
+
+    - Mealie:
+        icon: mealie.png
+        href: http://<REDACTED_IP>:9925
+
+    - Ollama:
+        icon: ollama.png
+        href: http://<REDACTED_IP>:11434

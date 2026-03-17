@@ -1,0 +1,21 @@
+services:
+  duplicati:
+    image: lscr.io/linuxserver/duplicati:latest
+    container_name: duplicati
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - SETTINGS_ENCRYPTION_KEY=gA3A/A6NZ4P//lpzGZBQx77FFGWhz+Xs
+      - CLI_ARGS=--webservice-password= <REDACTED>
+    volumes:
+      - /home/naren/homelab/docker/duplicati/config:/config # Local config db
+      - /home/naren/backups/duplicati:/backups # Destination folder for local backups
+      - /home/naren/homelab/docker:/source/docker:ro # Source: Docker Configs (Read Only)
+      - /home/naren/homeassistant:/source/homeassistant:ro # Source: Home Assistant Config (Read Only)
+      - /home/naren/backups/databases:/source/databases:ro # Source: Daily Database Dumps (Read Only)
+      - /home/naren/homelab/docker/mealie/data:/source/mealie:ro # Source: Mealie Recipes & Data (Read Only)
+      - /srv/samba/shared/Cover letters:/source/cover_letters:ro # Source: Job App PDFs (Read Only)
+    ports:
+      - 8200:8200
+    restart: unless-stopped

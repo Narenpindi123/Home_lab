@@ -1,0 +1,14 @@
+services:
+  adguard:
+    image: adguard/adguardhome
+    container_name: adguard
+    restart: always
+    volumes:
+      - ./work:/opt/adguardhome/work
+      - ./conf:/opt/adguardhome/conf
+    ports:
+      - "3000:3000"
+      - "100.104.89.100:53:53/udp"
+      - "100.104.89.100:53:53/tcp"
+      - "<REDACTED_IP>:53:53/udp"
+      - "<REDACTED_IP>:53:53/tcp"

@@ -1,0 +1,45 @@
+version: "3.9"
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    user: "1000:1000"
+    environment:
+      - ND_SCANSCHEDULE=1h
+      - ND_LOGLEVEL=info
+      - ND_SESSIONTIMEOUT=24h
+      - ND_ENABLEEXTERNALSERVICES=true
+      - ND_LYRICSPRIORITY=.lrc,embedded,.txt
+      - ND_LISTENBRAINZ_BASEURL=http://symfonium-scrobbler:8089/1/
+      - TZ=America/New_York
+    volumes:
+      - ./data:/data
+      - /srv/samba/shared/navidrome/music:/music:ro
+    ports:
+      - "4533:4533"
+    restart: unless-stopped
+
+  lyrics-fetcher:
+    image: python:3.12-alpine
+    container_name: lyrics-fetcher
+    volumes:
+      - /srv/samba/shared/navidrome/music:/music
+      - ./fetch_lyrics.py:/app/fetch_lyrics.py:ro
+    entrypoint: /bin/sh
+    command: >
+      -c "pip install --quiet mutagen &&
+          echo '--- Lyrics fetcher started ---' &&
+          python -u /app/fetch_lyrics.py &&
+          echo '--- Sleeping 6 hours before next run ---' &&
+          while true; do sleep 21600; python -u /app/fetch_lyrics.py; done"
+    restart: unless-stopped
+
+  symfonium-scrobbler:
+    image: python:3.12-alpine
+    container_name: symfonium-scrobbler
+    volumes:
+      - ./scrobbler.py:/app/scrobbler.py:ro
+    ports:
+      - "8089:8089"
+    command: python -u /app/scrobbler.py
+    restart: unless-stopped
