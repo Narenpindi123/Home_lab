@@ -1,14 +1,16 @@
-# Homelab Infrastructure
+# My Self-Hosted Homelab Infrastructure
 
-This repository contains my personal homelab Docker Compose configurations. It serves as an off-site backup of my infrastructure as code.
+Welcome to my homelab repository! This project serves as a showcase of my ability to design, deploy, and manage a self-hosted infrastructure environment using Infrastructure as Code (IaC) principles. 
 
-## Architecture & Services
-My self-hosted environment includes:
+All of the services defined here are actively running on my local server, securely managing my media, productivity tools, and networking.
 
-- **Media & Reading**: Komga, Navidrome, Romm
-- **Productivity & Notes**: Vikunja, Matter
-- **Networking & Access**: Tailscale, AdGuard Home
-- **Management & Backup**: Duplicati, Watchtower, Uptime Kuma
+## Architecture & Deployed Services
+My environment is containerized using Docker and Docker Compose, organized into the following functional stacks:
 
-## Note
-> **⚠️ Security Warning:** This is an exported configuration repository. All sensitive data such as API keys, passwords, and tokens have been automatically redacted (`<REDACTED>`) to prevent secret leakage. Due to this, these files **cannot be cloned and run as-is**. You will need to supply your own passwords and environmental variables to successfully spin up these services.
+- **Media & Content**: [Komga] (Comics/Manga reading), [Navidrome] (Music streaming), [Romm] (Retro game library management)
+- **Productivity & Notes**: [Vikunja] (Task management), [Matter] (Read-it-later application)
+- **Networking & Security**: [Tailscale] (Zero-trust VPN overlay), [AdGuard Home] (Network-wide ad and tracker blocking)
+- **Infrastructure Management**: [Duplicati] (Automated backups), [Watchtower] (Automated container updates), [Uptime Kuma] (Service monitoring and alerting)
+
+## Security Notice
+> **🔒 Secrets Management:** To adhere to best practices for public repositories, all sensitive data (passwords, JWT secrets, API tokens, and local IP addresses) have been systematically redacted (`<REDACTED>`) from these Compose files.
