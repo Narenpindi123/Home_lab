@@ -1,6 +1,6 @@
 # JobMatcher: job searching while learning
 
-JobMatcher is a personal project for collecting job listings, reviewing their requirements, and using AI to help assess fit. It runs alongside the other homelab services. This page describes the local implementation reviewed in October 2026; it does not ship the application or candidate data.
+JobMatcher is a personal project for collecting job listings, reviewing their requirements, and using AI to help assess fit. It runs alongside the other homelab services. This page describes the local implementation reviewed in October 2026. A [sanitized source snapshot and setup guide](../jobmatcher/) is now included; candidate data remains private.
 
 ## Collection
 
@@ -35,4 +35,4 @@ It remains a personal tool. This documentation does not claim that every source 
 
 ## Public scope
 
-This page is an overview, not installation instructions. The application currently shares its local environment with personal resumes, credentials, and notification integrations. Those files have not been copied into this public repository.
+The [public source](../jobmatcher/) includes the matcher, dashboard, local collectors, and tests. Credentials are environment-based, candidate profiles use generic identifiers, and Telegram is optional. The live application, resumes, databases, browser sessions, and private notification/email settings were not copied. See the source README for setup and integration limits.

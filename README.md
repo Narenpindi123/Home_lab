@@ -1,6 +1,6 @@
 # Naren's homelab
 
-A personal Linux and Docker homelab for self-hosted applications, automation, and hands-on learning. This repository contains public documentation and an older, redacted configuration export.
+A personal Linux and Docker homelab for self-hosted applications, automation, and hands-on learning. This repository contains public documentation, a sanitized JobMatcher source snapshot, and an older, redacted configuration export.
 
 I'm looking for opportunities in cybersecurity and IT. These projects give me practical work to discuss and improve while I continue learning.
 
@@ -26,12 +26,12 @@ JobMatcher brings job listings together for review and AI-assisted matching. Rec
 
 A search snippet can help discover a role, but it does not provide enough information for a reliable match score. Snippet-only listings remain marked `needs_review` and bypass automatic AI scoring. Source failures and partial results remain visible.
 
-[Read the JobMatcher project notes](docs/jobmatcher.md).
+[Browse the JobMatcher source and setup instructions](jobmatcher/) or [read the project notes](docs/jobmatcher.md).
 
 ## Repository boundaries
 
 - `docker/` is a historical, redacted export. It requires review and real configuration before use.
-- The current private deployment and JobMatcher application source are not included in this repository.
+- `jobmatcher/` is a sanitized source snapshot with generic candidate profiles and environment-based credentials. The live deployment and personal data remain private.
 - Credentials, resumes, account settings, application databases, browser profiles, and runtime data are not part of this documentation update.
 - Monitoring and backup services being configured does not establish an uptime percentage or prove that a restore will succeed.
 

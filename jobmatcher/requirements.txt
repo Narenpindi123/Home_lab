@@ -1,0 +1,10 @@
+nodriver
+beautifulsoup4
+lxml
+PyMuPDF
+requests
+pyTelegramBotAPI
+fpdf2
+flask
+imap-tools==1.6.0
+python-jobspy

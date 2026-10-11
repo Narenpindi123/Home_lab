@@ -1,0 +1,48 @@
+services:
+  jobmatcher:
+    build: .
+    ports:
+      - "127.0.0.1:5555:5555"
+    environment:
+      WEB_HOST: 0.0.0.0
+      DB_PATH: /app/data/processed_jobs.db
+      JOB_PIPELINE_DB: /app/data/processed_jobs.db
+      RESUME_DIR: /app/resumes
+      JOB_REPORT_DIR: /app/data/reports
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_PRIMARY_HOST: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b}
+      OLLAMA_TARGET: default
+      JOB_MATCHER_TIMEZONE: ${JOB_MATCHER_TIMEZONE:-America/Chicago}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID:-}
+      LINKEDIN_API_URL: http://sources:5556
+      LINKEDIN_API_TOKEN_FILE: /app/data/sources/token
+      JOB_SOURCES_API_URL: http://sources:5556
+      JOB_SOURCES_API_TOKEN_FILE: /app/data/sources/token
+    volumes:
+      - ./data:/app/data
+      - ./resumes:/app/resumes:ro
+    depends_on:
+      sources:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+  sources:
+    build: .
+    command: ["python", "linkedin_api.py"]
+    environment:
+      LINKEDIN_API_DATA: /app/data/sources
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5556/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama-models:/root/.ollama
+volumes:
+  ollama-models:

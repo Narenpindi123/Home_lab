@@ -1,0 +1,384 @@
+{
+  "dice": {
+    "searchQueries": [
+      "SOC Analyst",
+      "Cybersecurity Analyst",
+      "GRC Analyst",
+      "IT Risk Analyst",
+      "IAM Analyst",
+      "Vulnerability Management Analyst",
+      "Third Party Risk Analyst",
+      "Technology Controls Analyst",
+      "IT Support Specialist",
+      "Help Desk Analyst",
+      "NOC Analyst",
+      "Network Support Specialist"
+    ],
+    "limit": 200,
+    "maxPagesPerSearch": 2,
+    "maxResultsPerQuery": 30,
+    "postedWithinDays": 7
+  },
+  "ats": {
+    "keywords": [
+      "SOC analyst",
+      "cybersecurity",
+      "security analyst",
+      "GRC",
+      "compliance analyst",
+      "risk analyst",
+      "IAM analyst",
+      "identity governance",
+      "vulnerability management analyst",
+      "third party risk analyst",
+      "technology controls analyst",
+      "security assurance analyst",
+      "security awareness analyst",
+      "IT support",
+      "help desk",
+      "NOC analyst",
+      "network support specialist",
+      "cloud support associate"
+    ],
+    "targets": [
+      {
+        "ats": "greenhouse",
+        "slug": "cloudflare"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "datadog"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "stripe"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "affirm"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "adyen"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "carta"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "chime"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "figma"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "gitlab"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "mattermost"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "reddit"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "asana"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "coinbase"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "robinhood"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "brex"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "monzo"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "twilio"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "airbnb"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "gusto"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "webflow"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "dropbox"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "okta"
+      },
+      {
+        "ats": "ashby",
+        "slug": "ramp"
+      },
+      {
+        "ats": "ashby",
+        "slug": "notion"
+      },
+      {
+        "ats": "ashby",
+        "slug": "openai"
+      },
+      {
+        "ats": "ashby",
+        "slug": "linear"
+      },
+      {
+        "ats": "ashby",
+        "slug": "supabase"
+      },
+      {
+        "ats": "ashby",
+        "slug": "posthog"
+      },
+      {
+        "ats": "ashby",
+        "slug": "vanta"
+      },
+      {
+        "ats": "ashby",
+        "slug": "zapier"
+      },
+      {
+        "ats": "ashby",
+        "slug": "deel"
+      },
+      {
+        "ats": "lever",
+        "slug": "wealthfront"
+      },
+      {
+        "ats": "lever",
+        "slug": "spotify"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "anthropic"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "tailscale"
+      },
+      {
+        "ats": "ashby",
+        "slug": "plaid"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "veracode",
+        "companyName": "Veracode"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "axonius",
+        "companyName": "Axonius"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "expel",
+        "companyName": "Expel"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "huntress",
+        "companyName": "Huntress"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "dragos",
+        "companyName": "Dragos"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "recordedfuture",
+        "companyName": "Recorded Future"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "securityscorecard",
+        "companyName": "SecurityScorecard"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "onetrust",
+        "companyName": "OneTrust"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "pingidentity",
+        "companyName": "Ping Identity"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "beyondtrust",
+        "companyName": "BeyondTrust"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "rubrik",
+        "companyName": "Rubrik"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "netskope",
+        "companyName": "Netskope"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "zscaler",
+        "companyName": "Zscaler"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "forter",
+        "companyName": "Forter"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "feedzai",
+        "companyName": "Feedzai"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "alloy",
+        "companyName": "Alloy"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "toast",
+        "companyName": "Toast"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "mongodb",
+        "companyName": "MongoDB"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "elastic",
+        "companyName": "Elastic"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "grafanalabs",
+        "companyName": "Grafana Labs"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "cockroachlabs",
+        "companyName": "Cockroach Labs"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "fivetran",
+        "companyName": "Fivetran"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "fastly",
+        "companyName": "Fastly"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "newrelic",
+        "companyName": "New Relic"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "pagerduty",
+        "companyName": "PagerDuty"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "smartsheet",
+        "companyName": "Smartsheet"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "duolingo",
+        "companyName": "Duolingo"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "instacart",
+        "companyName": "Instacart"
+      },
+      {
+        "ats": "greenhouse",
+        "slug": "lyft",
+        "companyName": "Lyft"
+      },
+      {
+        "ats": "ashby",
+        "slug": "materialsecurity",
+        "companyName": "Material Security"
+      },
+      {
+        "ats": "ashby",
+        "slug": "socket",
+        "companyName": "Socket"
+      },
+      {
+        "ats": "ashby",
+        "slug": "semgrep",
+        "companyName": "Semgrep"
+      },
+      {
+        "ats": "ashby",
+        "slug": "sentry",
+        "companyName": "Sentry"
+      },
+      {
+        "ats": "ashby",
+        "slug": "drata",
+        "companyName": "Drata"
+      },
+      {
+        "ats": "lever",
+        "slug": "palantir",
+        "companyName": "Palantir"
+      }
+    ],
+    "limit": 1000,
+    "postedWithinDays": 7
+  },
+  "ziprecruiter": {
+    "keywords": [
+      "SOC Analyst",
+      "Cybersecurity Analyst",
+      "GRC Analyst",
+      "IT Risk Analyst",
+      "IAM Analyst",
+      "Vulnerability Management Analyst",
+      "Third Party Risk Analyst",
+      "Technology Controls Analyst",
+      "IT Support Specialist",
+      "Help Desk Analyst",
+      "NOC Analyst",
+      "Network Support Specialist"
+    ],
+    "limit": 200
+  }
+}
