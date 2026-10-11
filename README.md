@@ -1,51 +1,45 @@
-# 🚀 Self-Hosted Homelab Infrastructure
+# Naren's homelab
 
-Welcome to my personal homelab repository! This project serves as a living portfolio of my skills in **Systems Administration, DevOps, and Infrastructure as Code (IaC)**. 
+A personal Linux and Docker homelab for self-hosted applications, automation, and hands-on learning. This repository contains public documentation and an older, redacted configuration export.
 
-What started as a personal project to regain control over my data has evolved into a fully automated, containerized infrastructure environment that securely hosts multiple production-grade services on my local hardware.
+I'm looking for opportunities in cybersecurity and IT. These projects give me practical work to discuss and improve while I continue learning.
 
-## 🛠️ Core Technologies
-- **Containerization Engine:** Docker & Docker Compose
-- **Host OS:** Linux (Ubuntu/Debian)
-- **Networking & Access:** Tailscale (WireGuard-based Mesh VPN)
-- **DNS & Ad-Blocking:** AdGuard Home
-- **Reverse Proxy / Routing:** Tailscale MagicDNS
-- **Automation:** Python & Bash scripts
-- **Version Control:** Git
+## Current setup
 
----
+Reviewed against the local deployment configuration in October 2026. This is a configuration inventory, not a claim that every service has been tested or is currently healthy.
 
-## 🏗️ Architecture & Deployment Strategy
+| Area | Configured services |
+| --- | --- |
+| Home and personal organization | Home Assistant, Grocy, Homebox, Mealie |
+| Media and libraries | Jellyfin, Navidrome, Komga, RomM |
+| Documentation | BookStack |
+| Management and monitoring | Homepage, Portainer, Uptime Kuma |
+| DNS, notifications, and backups | AdGuard Home, ntfy, Duplicati |
+| Local AI and search | Ollama, Open WebUI, SearXNG |
+| Custom automation | JobMatcher, local job-source APIs, scheduled collectors, email sorting |
 
-The environment is designed with modularity, security, and ease of deployment in mind. Services are logically grouped into functional stacks using `docker-compose.yml` files. This IaC approach ensures that any service—or the entire server—can be torn down and reliably spun back up in minutes.
+The current deployment uses a consolidated Compose stack with persistent application data. Many service images are pinned by digest. The older files under [`docker/`](docker/) show a previous layout and should not be treated as the current deployment or a ready-to-run installer.
 
-### 🌐 Networking & Security
-A major focus of this architecture is secure, remote access without exposing services to the public internet:
-- **Tailscale Overlay Network:** Instead of opening ports on a traditional firewall, all devices and services communicate via a secure, encrypted Tailscale mesh network. This provides Zero-Trust remote access from anywhere in the world.
-- **AdGuard Home:** Deployed as the primary DNS server on the network, it actively filters out tracking domains and malicious advertisements at the network level, improving privacy and reducing bandwidth usage across all connected devices.
+## Recent work: JobMatcher
 
-### 📊 Infrastructure Management & Observability
-To ensure 99.9% uptime and prevent data loss, I implemented automated management toolsets:
-- **Duplicati:** Handles automated, encrypted, and compressed backups of all critical application data and databases. Backups are scheduled and run independently of the services.
-- **Watchtower:** Automates the lifecycle management of Docker containers by monitoring upstream Docker Hub registries and automatically pulling/restarting containers when base images are updated.
-- **Uptime Kuma:** Provides proactive, real-time monitoring of all internal services, with instant alerts configured for any downtime anomalies.
+JobMatcher brings job listings together for review and AI-assisted matching. Recent work includes local collectors for public job sources and a review state for incomplete listings.
 
----
+A search snippet can help discover a role, but it does not provide enough information for a reliable match score. Snippet-only listings remain marked `needs_review` and bypass automatic AI scoring. Source failures and partial results remain visible.
 
-## 💻 Deployed Services Overview
+[Read the JobMatcher project notes](docs/jobmatcher.md).
 
-### Productivity & Personal Organization
-- **[Vikunja](docker/vikunja/):** A robust, self-hosted task management application backed by a PostgreSQL database. It handles project organization, kanban boards, and task delegation.
-- **[Matter](docker/matter/):** A highly aesthetic read-it-later application used to consolidate articles, newsletters, and RSS feeds into a single distraction-free reading queue.
+## Repository boundaries
 
-### Media & Content Delivery
-- **[Navidrome](docker/navidrome/):** A lightweight, fast, and fully-featured self-hosted music streaming server to serve FLAC and high-fidelity audio to remote clients.
-- **[Komga](docker/komga/):** A dedicated media server tailored for comics, mangas, and magazines, acting as a personal digital library with cross-device sync.
-- **[Romm](docker/romm/):** A modern retro game library manager designed to catalog and organize ROM files with rich metadata scraping.
+- `docker/` is a historical, redacted export. It requires review and real configuration before use.
+- The current private deployment and JobMatcher application source are not included in this repository.
+- Credentials, resumes, account settings, application databases, browser profiles, and runtime data are not part of this documentation update.
+- Monitoring and backup services being configured does not establish an uptime percentage or prove that a restore will succeed.
 
----
+## Related projects
 
-## 🔒 Security Notice & Secrets Management
-> **Note to Reviewers:** To adhere to DevOps best practices for public repositories, all sensitive data has been programmatically redacted from these configuration files using a custom Python deployment script prior to pushing to GitHub.
-> 
-> Variables such as `POSTGRES_PASSWORD`, `JWT_SECRET`, local IP mappings, and API Authentication Tokens have been replaced with `<REDACTED>`. Therefore, these configurations act as architectural blueprints and cannot be run locally without injecting the corresponding `.env` secrets.
+- [Scam Shield](https://github.com/Narenpindi123/Scam_msg_finder): Android app with local, rule-based checks for suspicious messages.
+- [Enterprise network lab](https://github.com/Narenpindi123/enterprise-network-lab): Linux namespaces, routing, DNS, and firewall exercises.
+- [Enterprise SOC lab](https://github.com/Narenpindi123/enterprise-soc-lab): simulated attack telemetry, detection rules, and an analyst dashboard.
+- [IRAF](https://github.com/Narenpindi123/IRAF): Linux investigation data collection and reporting.
+
+These are personal and educational projects. Lab behavior and repository documentation should not be read as production performance guarantees.
