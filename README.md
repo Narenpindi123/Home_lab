@@ -2,7 +2,7 @@
 
 A personal Linux and Docker homelab for self-hosted applications, automation, and hands-on learning. This repository contains public documentation, a sanitized JobMatcher source snapshot, and an older, redacted configuration export.
 
-I'm looking for opportunities in cybersecurity and IT. These projects give me practical work to discuss and improve while I continue learning.
+I'm exploring opportunities in software engineering, applied AI/ML, cloud/DevOps, security, and IT. This homelab gives me a place to build Python applications, integrate local LLMs, and work with Linux infrastructure.
 
 ## Current setup
 
